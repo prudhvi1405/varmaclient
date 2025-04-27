@@ -1,0 +1,127 @@
+/* General container settings */
+.container {
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 100%; /* Ensures container is fluid and adapts to screen size */
+  padding: 20px;
+}
+
+/* Title for the table */
+.table-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e2e8f0; /* Light border for a subtle look */
+  border-radius: 8px; /* Rounded corners for table */
+  background-color: #ffffff; /* White background for table */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around table */
+  overflow: hidden; /* Prevent overflow from rounded corners */
+}
+
+/* Table header styling */
+.table-header {
+  height: 50px; /* Equal height for square-like appearance */
+  width: 100px; /* Adjusted to match content width and look more appealing */
+  text-align: center;
+  background-color: #f9fafb; /* Light background for headers */
+  border: 1px solid #ddd;
+  font-weight: bold;
+  color: #333;
+  vertical-align: middle;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Table cell styling */
+.table-cell {
+  height: 50px; /* Matches header height */
+  width: 100px; /* Adjusted for consistency */
+  text-align: center;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Hover effect for rows */
+.table-row:hover {
+  background-color: #f3f4f6; /* Light gray hover effect */
+  cursor: pointer; /* Cursor change to indicate interactivity */
+}
+
+/* Styling for the scrollable table body */
+.scrollable-tbody {
+  display: block;
+  max-height: 300px; /* Height for 10 rows of 60px */
+  overflow-y: scroll;
+  width: 100%;
+  border-top: 1px solid #ddd; /* Adds separation between header and body */
+}
+
+/* Ensures the header and body align properly */
+.scrollable-tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Column width consistency */
+.scrollable-tbody td,
+.scrollable-tbody th {
+  width: 100px; /* Ensures consistency between header and body */
+}
+
+/* Styling for table rows inside the scrollable body */
+.scrollable-tbody td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Sticky header on scroll (for better UX) */
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #f9fafb;
+  z-index: 10; /* Ensures header stays on top of the scrollable body */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Shadow under header for separation */
+}
+
+/* Table title styling for each section (if needed for multiple tables) */
+.table-section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #4a4a4a;
+  padding-left: 15px;
+}
+
+/* Smaller padding and font for smaller screen sizes */
+@media (max-width: 768px) {
+  .table-header, .table-cell {
+    width: auto; /* Allows table to adapt to screen width */
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .table-title {
+    font-size: 20px;
+  }
+
+  .scrollable-tbody {
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+}

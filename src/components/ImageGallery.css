@@ -1,0 +1,72 @@
+/* General container for the gallery */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows images to wrap into rows */
+  justify-content: center; /* Center images horizontally */
+  gap: 20px; /* Space between images */
+  padding: 20px;
+  max-width: 100%;
+}
+
+/* Loading message styling */
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height to center the message */
+}
+
+/* Styling for each image card */
+.image-card {
+  width: 200px; /* Fixed width for each image card */
+  height: 300px; /* Fixed height for each image card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for image cards */
+.image-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Styling for images */
+.image-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Ensure images are scaled without stretching */
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .gallery-container {
+    gap: 15px; /* Reduce gap on smaller screens */
+  }
+
+  .image-card {
+    width: 150px; /* Adjust image card width */
+    height: 220px; /* Adjust image card height */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+    width: 130px; /* Further reduce image card size for very small screens */
+    height: 200px;
+  }
+
+  .loading-message {
+    font-size: 16px; /* Smaller font size on very small screens */
+  }
+}
